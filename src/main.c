@@ -8,7 +8,7 @@ int main(int argc, char** argv)
     "Chip8 Window",
     SDL_WINDOWPOS_UNDEFINED,
     SDL_WINDOWPOS_UNDEFINED,
-    650, 320, SDL_WINDOW_SHOWN
+    640, 320, SDL_WINDOW_SHOWN
   );
 
   SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_TEXTUREACCESS_TARGET);
