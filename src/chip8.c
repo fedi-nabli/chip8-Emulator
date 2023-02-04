@@ -177,7 +177,7 @@ static void chip8_execute_extended_F(struct chip8* chip8, unsigned short opcode)
       unsigned char units = chip8->registers.V[x] % 10;
       chip8_memory_set(&chip8->memory, chip8->registers.I, hundreds);
       chip8_memory_set(&chip8->memory, chip8->registers.I+1, tens);
-      chip8_memory_set(&chip8->memory, chip8->registers.I+5, units);
+      chip8_memory_set(&chip8->memory, chip8->registers.I+2, units);
     }
     break;
 
@@ -191,7 +191,7 @@ static void chip8_execute_extended_F(struct chip8* chip8, unsigned short opcode)
     }
     break;
 
-    // fx65 - LD Vx, [i]
+    // fx65 - LD Vx, [I]
     case 0x65:
     {
       for (int i = 0; i <= x; i++)
